@@ -1,0 +1,190 @@
+.popup-container {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.5);
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ opacity: 0;
+ visibility: hidden;
+ transition: opacity 0.5s, visibility 0.5s;
+ z-index: 100000;
+}
+
+.popup-content {
+ background-color: #fff;
+ padding: 30px;
+ border-radius: 10px;
+ width: 80%;
+ max-width: 500px;
+ text-align: center;
+ box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+ z-index: 100000;
+}
+
+.cta-button {
+ background-color: #44194a; 
+ color: #fff;
+ padding: 10px 20px;
+ border-radius: 5px;
+ text-decoration: none;
+ display: inline-block;
+ margin-top: 20px;
+ transition: background-color 0.3s ease, transform 0.3s ease;
+ font-size: 18px;
+ font-weight: bold; 
+ border: 2px solid #44194a; 
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ z-index: 100000;
+}
+
+.cta-button:hover {
+ background-color: #330f33; 
+ transform: scale(1.05);
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ z-index: 100000;
+}
+
+.cta-button:active {
+ transform: scale(0.95);
+ z-index: 100000;
+}
+
+.cta-button:focus {
+ outline: none;
+ box-shadow: 0 0 0 3px rgba(68, 25, 74, 0.5);
+ z-index: 100000;
+}
+
+.close-popup {
+ color: #000;
+ text-decoration: none;
+ position: absolute;
+ top: 10px;
+ right: 10px;
+ font-size: 24px;
+ font-weight: bold;
+ cursor: pointer;
+ z-index: 100000;
+}
+
+.show {
+ opacity: 1;
+ visibility: visible;
+ z-index: 100000;
+}
+
+/* Animation */
+@keyframes fadeIn {
+ from {
+    opacity: 0;
+    transform: translateY(-20px);
+ }
+ to {
+    opacity: 1;
+    transform: translateY(0);
+ }
+}
+
+.popup-container.show {
+ animation: fadeIn 0.5s ease-out forwards;
+  z-index: 100000;
+ 
+}
+
+
+.features-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%; 
+  z-index: 100000;
+ 
+}
+
+
+.features {
+ list-style: none; 
+ padding: 0;
+ margin-top: 4px;
+ display: flex;
+ flex-direction: column; 
+ align-items: flex-start; 
+  z-index: 100000;
+ 
+}
+
+.features li {
+ padding: 5px 0;
+ font-weight: bold;
+ color: #000000;
+ text-align: left;
+ 
+}
+
+.features li::before {
+ content: "\f00c";
+ font-family: "Font Awesome 5 Free";
+ font-weight: 900;
+ color: green;
+ padding-right: 5px;
+ 
+}
+
+
+
+.price-tag {
+ font-size: 32px;
+ color: #3d1166;
+ margin-bottom: 20px;
+ font-weight: bold;
+ display: inline-flex;
+ align-items: baseline;
+ 
+}
+
+.dollar {
+ font-size: 0.8em; 
+ margin-right: 2px; 
+}
+
+.price {
+ font-size: 2.3em; 
+ margin-right: 2px; 
+}
+
+.per-month {
+ font-size: 0.8em; 
+}
+
+
+
+.refund-policy {
+ display: inline-block;
+ position: relative;
+}
+
+.refund-policy .tooltiptext {
+ visibility: hidden;
+ width: 120px;
+ background-color: black;
+ color: #fff;
+ text-align: center;
+ padding: 5px 0;
+ border-radius: 6px;
+ position: absolute;
+ z-index: 1;
+ bottom: 125%;
+ left: 50%;
+ margin-left: -60px;
+ opacity: 0;
+ transition: opacity 0.3s;
+}
+
+.refund-policy:hover .tooltiptext {
+ visibility: visible;
+ opacity: 1;
+}
